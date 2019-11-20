@@ -21,7 +21,11 @@ int radio_init(int addr) {
 
     // Check validity of address
 
+
     // Create UDP socket
+    if ((sock = socket(AF_INET, SOCK_DRAM, IPPROTO_UDP) == -1) {
+    	return ERR_FAILED;
+    }
 
     // Prepare address structure
 
